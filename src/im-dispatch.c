@@ -253,6 +253,7 @@ static void do_req_message (const int fd) {
             shutdown_client (fd);
             return;
         }
+        buf[sizeof (buf) - 1] = 0;
         message_cb (buf);
     }
 }
